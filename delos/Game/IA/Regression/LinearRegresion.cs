@@ -32,11 +32,38 @@ namespace delos.Game.IA.Regression
 
         public void Fit(Matrix x, Matrix Y) 
         {
+
+            List<Vector> xcols = new List<Vector>();
+
+            for (int j = 0; j < x.nCols; j++)
+            {
+                xcols.Add(x.GetCol(j));
+            }
+
+            Vector ones = nc.Ones(x.nRows);
+
+            xcols.Add(ones);
+
+            Matrix X = new Matrix(xcols.ToArray()).T;
+
+            Matrix W = ((X.T.dot(X)).I).dot(X.T).dot(Y);
+
+            W.Show();
+
+            θ0 = W[0, 0];
+            θ1 = W[1, 0];
+
+
+        }
+
+
+        public void Fit4(Matrix x, Matrix Y)
+        {
             Vector xi = x.GetCol(0);
 
             Vector ones = nc.Ones(xi.nValues);
 
-            Matrix X = new Matrix(ones,xi).T;
+            Matrix X = new Matrix(ones, xi).T;
 
             Matrix W = ((X.T.dot(X)).I).dot(X.T).dot(Y);
 
@@ -45,7 +72,6 @@ namespace delos.Game.IA.Regression
 
 
         }
-
         public void Fit(Vector x1, Vector yi, double α, double epoch)
         {
 
