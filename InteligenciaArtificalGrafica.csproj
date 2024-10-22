@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="delos\Data\Pandas.cs" />
     <Compile Include="delos\Game\Enviroment\World.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -16,26 +16,41 @@ using InteligenciaArtificalGrafica.delos.Mathematics;
 using delos.Mathematics.LinearAlgebra;
 using delos.Game.IA.Regression;
 using ScottPlot;
+using delos.Data;
 
 namespace InteligenciaArtificalGrafica
 {
     public partial class Form1 : Form
     {
+        string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
         Vector xi, yi;
         Numcs nc;
         Vector xMat, yMat;
 
 
 
-        string directory = System.Environment.CurrentDirectory;
+       // string directory = System.Environment.CurrentDirectory;
         private void Form1_Load(object sender, EventArgs e)
         {
-            nc = new Numcs();
+
+            Pandas pd = new Pandas();
+            pd.read_csv(baseDirectory+ "Calificaciones.csv", 1);
+
+            Matrix X = pd.iloc(1, 1, pd.nRow, 3);
+
+            Matrix Y = pd.iloc(1, 4, pd.nRow, 4);
+
+            LinearRegresion reg = new LinearRegresion ();
+
+            reg.Fit(X,Y);
+            
+            //nc = new Numcs();
             // xi = new Vector(6, 1, 4, 4, 6, 1, 3, 8, 7, 1, 4, 7, 1, 1, 7, 8, 2, 1, 6, 8);
             /* yi = new Vector(3796.42, 1301.38, 2923.62, 2822.94, 3648.76,
                                    1481.83, 2238.83, 4784.02, 4418.03, 1043.56,
                                    2684.12, 4389.07, 1489.30, 1400.45, 4390.26, 4860.31, 1571.67,
                                    1260.92, 3736.80, 4887.11);*/
+            /*
             xi = new Vector(100,110,120,150,190,200,225,265,280,300);
             yi = new Vector(52,75,62,61,84,98,110,94,100,135);
             Matrix Xi = new Matrix(xi).T;
@@ -47,6 +62,7 @@ namespace InteligenciaArtificalGrafica
             li.FitEvent += Li_FitEvent;
             li.Fit(xi, yi, 0.0000005, 3000);
             
+            */
         }
 
         private void Li_FitEvent(object sender, LinearRegresion.FitEventArgs e)
