@@ -17,6 +17,7 @@ using delos.Mathematics.LinearAlgebra;
 using delos.Game.IA.Regression;
 using ScottPlot;
 using delos.Data;
+using delos.Game.IA.Searches;
 
 namespace InteligenciaArtificalGrafica
 {
@@ -32,7 +33,15 @@ namespace InteligenciaArtificalGrafica
        // string directory = System.Environment.CurrentDirectory;
         private void Form1_Load(object sender, EventArgs e)
         {
+            Vertice mix = new Vertice("Mixquiahuala");
+            Vertice prog = new Vertice("Pobreso");
+            Vertice hoyos = new Vertice("Los Hoyos");
 
+            mix.AgregarAdyacente(prog);
+            mix.AgregarAdyacente(hoyos);
+            mix.MostrarAdyacentes();
+
+            /*
             Pandas pd = new Pandas();
             pd.read_csv(baseDirectory+ "Calificaciones.csv", 1);
 
@@ -43,7 +52,8 @@ namespace InteligenciaArtificalGrafica
             LinearRegresion reg = new LinearRegresion ();
 
             reg.Fit(X,Y);
-            
+            */
+
             //nc = new Numcs();
             // xi = new Vector(6, 1, 4, 4, 6, 1, 3, 8, 7, 1, 4, 7, 1, 1, 7, 8, 2, 1, 6, 8);
             /* yi = new Vector(3796.42, 1301.38, 2923.62, 2822.94, 3648.76,
