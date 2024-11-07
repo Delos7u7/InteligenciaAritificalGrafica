@@ -72,6 +72,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="delos\Game\IA\Regression\LinearRegresion.cs" />
+    <Compile Include="delos\Game\IA\Searches\Busqueda.cs" />
+    <Compile Include="delos\Game\IA\Searches\Grafo.cs" />
+    <Compile Include="delos\Game\IA\Searches\Nodo.cs" />
     <Compile Include="delos\Game\IA\Searches\Vertice.cs" />
     <Compile Include="delos\Game\Player\Actor.cs" />
     <Compile Include="delos\Mathematics\LinearAlgebra\GaussJordan.cs" />

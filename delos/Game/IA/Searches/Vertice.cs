@@ -10,8 +10,8 @@ namespace delos.Game.IA.Searches
     public class Vertice
     {
         public bool visitado = false;
-        List<Vertice> adyacentes;
-        private string Nombre = "";
+        public List<Vertice> adyacentes;
+        public string Nombre = "";
         public Vertice(string nombre) 
         {
             Nombre = nombre;    

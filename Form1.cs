@@ -30,16 +30,408 @@ namespace InteligenciaArtificalGrafica
 
 
 
-       // string directory = System.Environment.CurrentDirectory;
+        // string directory = System.Environment.CurrentDirectory;
         private void Form1_Load(object sender, EventArgs e)
         {
             Vertice mix = new Vertice("Mixquiahuala");
-            Vertice prog = new Vertice("Pobreso");
-            Vertice hoyos = new Vertice("Los Hoyos");
+            Vertice ixmi = new Vertice("Ixmiquilpan");
+            Vertice acto = new Vertice("Actopan");
+            Vertice pro = new Vertice("Progreso");
+            Vertice hoyos = new Vertice("Los hoyos");
+            Vertice tezo = new Vertice("Tezontepec");
+            Vertice tina = new Vertice("El tinaco");
+            Vertice tlahue = new Vertice("Tlahuelilpan");
+            Vertice tlax = new Vertice("Tlaxcoapan");
+            Vertice teo = new Vertice("Teocalco");
+            Vertice tula = new Vertice("Tula");
 
-            mix.AgregarAdyacente(prog);
+            Vertice ciudadSahagun = new Vertice("Ciudad Sahagún");
+            Vertice tecozautla = new Vertice("Tecozautla");
+            Vertice sanAgustin = new Vertice("San Agustín Tlaxiaca");
+            Vertice atitalaquia = new Vertice("Atitalaquia");
+            Vertice sanSalvador = new Vertice("San Salvador");
+            Vertice elArenal = new Vertice("El Arenal");
+            Vertice epazoyucan = new Vertice("Epazoyucan");
+            Vertice almoloya = new Vertice("Almoloya");
+            Vertice tolcayuca = new Vertice("Tolcayuca");
+            Vertice tlanalapa = new Vertice("Tlanalapa");
+            Vertice chapulhuacan = new Vertice("Chapulhuacán");
+            Vertice huautla = new Vertice("Huautla");
+            Vertice tenangoDeDoria = new Vertice("Tenango de Doria");
+            Vertice tepehuacan = new Vertice("Tepehuacán de Guerrero");
+            Vertice acaxochitlan = new Vertice("Acaxochitlán");
+            Vertice calnali = new Vertice("Calnali");
+            Vertice zacualtipan = new Vertice("Zacualtipán de Ángeles");
+            Vertice xochicoatlan = new Vertice("Xochicoatlán");
+            Vertice pisaflores = new Vertice("Pisaflores");
+            Vertice molangoEscamilla = new Vertice("Molango de Escamilla");
+            Vertice huichapan = new Vertice("Huichapan");
+            Vertice apaxco = new Vertice("Apaxco");
+            Vertice nicolasFlores = new Vertice("Nicolás Flores");
+            Vertice metztitlan = new Vertice("Metztitlán");
+            Vertice huehuetla = new Vertice("Huehuetla");
+            Vertice sanFelipe = new Vertice("San Felipe Orizatlán");
+            Vertice atlapexco = new Vertice("Atlapexco");
+            Vertice tianguistengo = new Vertice("Tianguistengo");
+            Vertice atotonilcoElGrande = new Vertice("Atotonilco El Grande");
+            Vertice pachuca = new Vertice("Pachuca");
+            Vertice tulancingo = new Vertice("Tulancingo");
+            Vertice huejutla = new Vertice("Huejutla de Reyes");
+            Vertice tizayuca = new Vertice("Tizayuca");
+            Vertice mineral = new Vertice("Mineral de la Reforma");
+            Vertice tepeji = new Vertice("Tepeji del Río");
+            Vertice apan = new Vertice("Apan");
+            Vertice zimapan = new Vertice("Zimapán");
+            Vertice tepeapulco = new Vertice("Tepeapulco");
+            Vertice atotonilco = new Vertice("Atotonilco de Tula");
+            Vertice molango = new Vertice("Molango");
+            Vertice cardonal = new Vertice("Cardonal");
+            Vertice metztitlán = new Vertice("Metztitlán");
+            Vertice actopan = new Vertice("Actopan");
+            Vertice tecazoutla = new Vertice("tecazoutla");
+
+
+
+            Grafo hidalgo = new Grafo("Hidalgo");
+            hidalgo.AgregarVertice(mix);
+            hidalgo.AgregarVertice(ixmi);
+            hidalgo.AgregarVertice(acto);
+            hidalgo.AgregarVertice(pro);
+            hidalgo.AgregarVertice(hoyos);
+            hidalgo.AgregarVertice(tezo);
+            hidalgo.AgregarVertice(tina);
+            hidalgo.AgregarVertice(tlahue);
+            hidalgo.AgregarVertice(tlax);
+            hidalgo.AgregarVertice(teo);
+            hidalgo.AgregarVertice(tula);
+            hidalgo.AgregarVertice(pachuca);
+            hidalgo.AgregarVertice(tecazoutla);
+            hidalgo.AgregarVertice(tulancingo);
+            hidalgo.AgregarVertice(huejutla);
+            hidalgo.AgregarVertice(tizayuca);
+            hidalgo.AgregarVertice(mineral);
+            hidalgo.AgregarVertice(tepeji);
+            hidalgo.AgregarVertice(apan);
+            hidalgo.AgregarVertice(zimapan);
+            hidalgo.AgregarVertice(tepeapulco);
+            hidalgo.AgregarVertice(huichapan);
+            hidalgo.AgregarVertice(atotonilco);
+            hidalgo.AgregarVertice(molango);
+            hidalgo.AgregarVertice(cardonal);
+            hidalgo.AgregarVertice(metztitlan);
+            hidalgo.AgregarVertice(actopan);
+            hidalgo.AgregarVertice(ciudadSahagun);
+            hidalgo.AgregarVertice(tecozautla);
+            hidalgo.AgregarVertice(sanAgustin);
+            hidalgo.AgregarVertice(atitalaquia);
+            hidalgo.AgregarVertice(sanSalvador);
+            hidalgo.AgregarVertice(elArenal);
+            hidalgo.AgregarVertice(epazoyucan);
+            hidalgo.AgregarVertice(almoloya);
+            hidalgo.AgregarVertice(tolcayuca);
+            hidalgo.AgregarVertice(tlanalapa);
+            hidalgo.AgregarVertice(chapulhuacan);
+            hidalgo.AgregarVertice(huautla);
+            hidalgo.AgregarVertice(tenangoDeDoria);
+            hidalgo.AgregarVertice(tepehuacan);
+            hidalgo.AgregarVertice(acaxochitlan);
+            hidalgo.AgregarVertice(calnali);
+            hidalgo.AgregarVertice(zacualtipan);
+            hidalgo.AgregarVertice(xochicoatlan);
+            hidalgo.AgregarVertice(pisaflores);
+            hidalgo.AgregarVertice(molangoEscamilla);
+            hidalgo.AgregarVertice(apaxco);
+            hidalgo.AgregarVertice(nicolasFlores);
+            hidalgo.AgregarVertice(huehuetla);
+            hidalgo.AgregarVertice(sanFelipe);
+            hidalgo.AgregarVertice(atlapexco);
+            hidalgo.AgregarVertice(tianguistengo);
+            hidalgo.AgregarVertice(atotonilcoElGrande);
+            hidalgo.AgregarVertice(mix);
+            hidalgo.AgregarVertice(ixmi);
+            hidalgo.AgregarVertice(pro);
+            hidalgo.AgregarVertice(hoyos);
+            hidalgo.AgregarVertice(tezo);
+            hidalgo.AgregarVertice(tina);
+            hidalgo.AgregarVertice(tlahue);
+            hidalgo.AgregarVertice(tlax);
+            hidalgo.AgregarVertice(teo);
+            hidalgo.AgregarVertice(tula);
+
+            mix.AgregarAdyacente(pro);
             mix.AgregarAdyacente(hoyos);
-            mix.MostrarAdyacentes();
+
+            hoyos.AgregarAdyacente(mix);
+            hoyos.AgregarAdyacente(tezo);
+            hoyos.AgregarAdyacente(tina);
+
+            tezo.AgregarAdyacente(hoyos);
+            tezo.AgregarAdyacente(tina);
+
+            tina.AgregarAdyacente(tlahue);
+            tina.AgregarAdyacente(tezo);
+            tina.AgregarAdyacente(hoyos);
+
+            tlahue.AgregarAdyacente(tina);
+            tlahue.AgregarAdyacente(tlax);
+            tlax.AgregarAdyacente(tlahue);
+            tlahue.AgregarAdyacente(teo);
+
+            teo.AgregarAdyacente(tula);
+            teo.AgregarAdyacente(tlahue);
+            tula.AgregarAdyacente(teo);
+
+            pro.AgregarAdyacente(mix);
+            pro.AgregarAdyacente(acto);
+            pro.AgregarAdyacente(ixmi);
+            ixmi.AgregarAdyacente(pro);
+            ixmi.AgregarAdyacente(acto);
+            acto.AgregarAdyacente(ixmi);
+            acto.AgregarAdyacente(pro);
+
+            // Conexiones de Pachuca
+            pachuca.AgregarAdyacente(mineral);
+            pachuca.AgregarAdyacente(actopan);
+            pachuca.AgregarAdyacente(tizayuca);
+            pachuca.AgregarAdyacente(tulancingo);
+            pachuca.AgregarAdyacente(epazoyucan);
+            pachuca.AgregarAdyacente(sanAgustin);
+            pachuca.AgregarAdyacente(apan);
+
+            // Conexiones de Mineral de la Reforma
+            mineral.AgregarAdyacente(pachuca);
+            mineral.AgregarAdyacente(epazoyucan);
+
+            // Conexiones de Actopan
+            actopan.AgregarAdyacente(pachuca);
+            actopan.AgregarAdyacente(sanAgustin);
+            actopan.AgregarAdyacente(elArenal);
+            actopan.AgregarAdyacente(sanSalvador);
+            actopan.AgregarAdyacente(mix);
+
+            // Conexiones de San Agustín Tlaxiaca
+            sanAgustin.AgregarAdyacente(pachuca);
+            sanAgustin.AgregarAdyacente(actopan);
+            sanAgustin.AgregarAdyacente(elArenal);
+
+            // Conexiones de El Arenal
+            elArenal.AgregarAdyacente(sanAgustin);
+            elArenal.AgregarAdyacente(actopan);
+            elArenal.AgregarAdyacente(sanSalvador);
+
+            // Conexiones de San Salvador
+            sanSalvador.AgregarAdyacente(actopan);
+            sanSalvador.AgregarAdyacente(elArenal);
+            sanSalvador.AgregarAdyacente(mix);
+
+            // Conexiones de Mixquiahuala
+            mix.AgregarAdyacente(pro);
+            mix.AgregarAdyacente(hoyos);
+            mix.AgregarAdyacente(sanSalvador);
+            mix.AgregarAdyacente(actopan);
+
+            // Conexiones de Progreso
+            pro.AgregarAdyacente(mix);
+            pro.AgregarAdyacente(acto);
+            pro.AgregarAdyacente(ixmi);
+
+            // Conexiones de Ixmiquilpan
+            ixmi.AgregarAdyacente(pro);
+            ixmi.AgregarAdyacente(acto);
+            ixmi.AgregarAdyacente(zimapan);
+            ixmi.AgregarAdyacente(cardonal);
+
+            // Conexiones de Actopan (acto)
+            acto.AgregarAdyacente(ixmi);
+            acto.AgregarAdyacente(pro);
+
+            // Conexiones de Los Hoyos
+            hoyos.AgregarAdyacente(mix);
+            hoyos.AgregarAdyacente(tezo);
+            hoyos.AgregarAdyacente(tina);
+
+            // Conexiones de Tezontepec
+            tezo.AgregarAdyacente(hoyos);
+            tezo.AgregarAdyacente(tina);
+            tezo.AgregarAdyacente(tlahue);
+
+            // Conexiones de El Tinaco
+            tina.AgregarAdyacente(tlahue);
+            tina.AgregarAdyacente(tezo);
+            tina.AgregarAdyacente(hoyos);
+
+            // Conexiones de Tlahuelilpan
+            tlahue.AgregarAdyacente(tina);
+            tlahue.AgregarAdyacente(tlax);
+            tlahue.AgregarAdyacente(teo);
+
+            // Conexiones de Tlaxcoapan
+            tlax.AgregarAdyacente(tlahue);
+            tlax.AgregarAdyacente(teo);
+
+            // Conexiones de Teocalco
+            teo.AgregarAdyacente(tula);
+            teo.AgregarAdyacente(tlahue);
+            teo.AgregarAdyacente(tlax);
+
+            // Conexiones de Tula
+            tula.AgregarAdyacente(teo);
+            tula.AgregarAdyacente(atitalaquia);
+            tula.AgregarAdyacente(tepeji);
+
+            // Conexiones de Atitalaquia
+            atitalaquia.AgregarAdyacente(tula);
+            atitalaquia.AgregarAdyacente(tepeji);
+
+            // Conexiones de Tepeji del Río
+            tepeji.AgregarAdyacente(atitalaquia);
+            tepeji.AgregarAdyacente(apaxco);
+
+            // Conexiones de Apaxco
+            apaxco.AgregarAdyacente(tepeji);
+
+            // Conexiones de Tulancingo
+            tulancingo.AgregarAdyacente(pachuca);
+            tulancingo.AgregarAdyacente(acaxochitlan);
+            tulancingo.AgregarAdyacente(tenangoDeDoria);
+            tulancingo.AgregarAdyacente(tlanalapa);
+            tulancingo.AgregarAdyacente(epazoyucan);
+
+            // Conexiones de Epazoyucan
+            epazoyucan.AgregarAdyacente(pachuca);
+            epazoyucan.AgregarAdyacente(mineral);
+            epazoyucan.AgregarAdyacente(tulancingo);
+
+            // Conexiones de Acaxochitlán
+            acaxochitlan.AgregarAdyacente(tulancingo);
+            acaxochitlan.AgregarAdyacente(tenangoDeDoria);
+
+            // Conexiones de Tenango de Doria
+            tenangoDeDoria.AgregarAdyacente(acaxochitlan);
+            tenangoDeDoria.AgregarAdyacente(huehuetla);
+
+            // Conexiones de Huehuetla
+            huehuetla.AgregarAdyacente(tenangoDeDoria);
+            huehuetla.AgregarAdyacente(pisaflores);
+
+            // Conexiones de Pisaflores
+            pisaflores.AgregarAdyacente(huehuetla);
+            pisaflores.AgregarAdyacente(chapulhuacan);
+
+            // Conexiones de Chapulhuacán
+            chapulhuacan.AgregarAdyacente(pisaflores);
+
+            // Conexiones de Huejutla de Reyes
+            huejutla.AgregarAdyacente(sanFelipe);
+            huejutla.AgregarAdyacente(calnali);
+            huejutla.AgregarAdyacente(tepehuacan);
+
+            // Conexiones de San Felipe Orizatlán
+            sanFelipe.AgregarAdyacente(huejutla);
+            sanFelipe.AgregarAdyacente(atlapexco);
+
+            // Conexiones de Atlapexco
+            atlapexco.AgregarAdyacente(sanFelipe);
+            atlapexco.AgregarAdyacente(huautla);
+
+            // Conexiones de Huautla
+            huautla.AgregarAdyacente(atlapexco);
+
+            // Conexiones de Calnali
+            calnali.AgregarAdyacente(huejutla);
+            calnali.AgregarAdyacente(zacualtipan);
+            calnali.AgregarAdyacente(molango);
+
+            // Conexiones de Zacualtipán de Ángeles
+            zacualtipan.AgregarAdyacente(calnali);
+            zacualtipan.AgregarAdyacente(molango);
+
+            // Conexiones de Molango de Escamilla
+            molango.AgregarAdyacente(zacualtipan);
+            molango.AgregarAdyacente(metztitlan);
+
+            // Conexiones de Metztitlán
+            metztitlan.AgregarAdyacente(molango);
+            metztitlan.AgregarAdyacente(cardonal);
+
+            // Conexiones de Cardonal
+            cardonal.AgregarAdyacente(metztitlan);
+            cardonal.AgregarAdyacente(ixmi);
+
+            // Conexiones de Zimapán
+            zimapan.AgregarAdyacente(ixmi);
+            zimapan.AgregarAdyacente(nicolasFlores);
+            zimapan.AgregarAdyacente(huichapan);
+
+            // Conexiones de Nicolás Flores
+            nicolasFlores.AgregarAdyacente(zimapan);
+            nicolasFlores.AgregarAdyacente(huichapan);
+
+            // Conexiones de Huichapan
+            huichapan.AgregarAdyacente(nicolasFlores);
+            huichapan.AgregarAdyacente(tecazoutla);
+
+            // Conexiones de Tecozautla
+            tecozautla.AgregarAdyacente(huichapan);
+
+            // Conexiones de Tizayuca
+            tizayuca.AgregarAdyacente(pachuca);
+            tizayuca.AgregarAdyacente(tolcayuca);
+            tizayuca.AgregarAdyacente(atotonilco);
+
+            // Conexiones de Tolcayuca
+            tolcayuca.AgregarAdyacente(tizayuca);
+            tolcayuca.AgregarAdyacente(apan);
+
+            // Conexiones de Apan
+            apan.AgregarAdyacente(tolcayuca);
+            apan.AgregarAdyacente(almoloya);
+            apan.AgregarAdyacente(tepeapulco);
+
+            // Conexiones de Almoloya
+            almoloya.AgregarAdyacente(apan);
+            almoloya.AgregarAdyacente(ciudadSahagun);
+
+            // Conexiones de Tepeapulco
+            tepeapulco.AgregarAdyacente(apan);
+            tepeapulco.AgregarAdyacente(ciudadSahagun);
+            tepeapulco.AgregarAdyacente(tlanalapa);
+
+            // Conexiones de Ciudad Sahagún
+            ciudadSahagun.AgregarAdyacente(tepeapulco);
+            ciudadSahagun.AgregarAdyacente(almoloya);
+
+            // Conexiones de Tlanalapa
+            tlanalapa.AgregarAdyacente(tepeapulco);
+            tlanalapa.AgregarAdyacente(tulancingo);
+
+            // Conexiones de Atotonilco de Tula
+            atotonilco.AgregarAdyacente(tizayuca);
+            atotonilco.AgregarAdyacente(atitalaquia);
+
+            // Conexiones de Atotonilco El Grande
+            atotonilcoElGrande.AgregarAdyacente(pachuca);
+            atotonilcoElGrande.AgregarAdyacente(metztitlan);
+
+            // Conexiones de Tepehuacán de Guerrero
+            tepehuacan.AgregarAdyacente(huejutla);
+
+            // Conexiones de Tianguistengo
+            tianguistengo.AgregarAdyacente(zacualtipan);
+
+            // Conexiones de Xochicoatlán
+            xochicoatlan.AgregarAdyacente(calnali);
+            xochicoatlan.AgregarAdyacente(zacualtipan);
+
+            // Conexiones de Tepeji del Río
+            tepeji.AgregarAdyacente(tula);
+            tepeji.AgregarAdyacente(atitalaquia);
+
+            //hidalgo.MostrarVertices();
+            Vertice origen = hidalgo.Buscar("Progreso");
+            Vertice destino = hidalgo.Buscar("Tula");
+            Busqueda busqueeda = new Busqueda();
+            busqueeda.PrimeroEnAnchura(origen, destino);
 
             /*
             Pandas pd = new Pandas();
