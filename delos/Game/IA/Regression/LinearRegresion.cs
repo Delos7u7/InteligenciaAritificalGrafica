@@ -15,6 +15,7 @@ namespace delos.Game.IA.Regression
         Numcs nc;
         public double θ1 = 0;
         public double θ0 = 0;
+        Matrix W;
         public LinearRegresion() 
         { 
             nc = new Numcs();
@@ -46,7 +47,7 @@ namespace delos.Game.IA.Regression
 
             Matrix X = new Matrix(xcols.ToArray()).T;
 
-            Matrix W = ((X.T.dot(X)).I).dot(X.T).dot(Y);
+            W = ((X.T.dot(X)).I).dot(X.T).dot(Y);
 
             W.Show();
 
@@ -102,6 +103,31 @@ namespace delos.Game.IA.Regression
             Vector y = θ0 + (θ1 * habitaciones);
 
             return y;
+        }
+
+        public double Predict(Matrix x)
+        {
+            Vector vectorX = x.GetCol(0);
+
+            Vector vectorW = W.GetCol(0);
+            double[] data = new double[vectorW.nValues];
+            double[] Ws = new double[vectorW.nValues - 1 ];
+            for (int i = 0; i < data.Length; i++)
+            {
+                data[i] = vectorW[i];
+                if (i < data.Length - 1)
+                {
+                    Ws[i] = vectorW[i];
+                }
+            }
+
+            
+
+            double W0 = data[data.Length - 1];
+            Vector w = new Vector(Ws);
+            double y = W0 + (vectorX * w).Σ();
+            return y; 
+        
         }
 
         public delegate void FitEventHandler(object sender, FitEventArgs e);

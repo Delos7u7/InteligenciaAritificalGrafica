@@ -33,6 +33,7 @@ namespace InteligenciaArtificalGrafica
         // string directory = System.Environment.CurrentDirectory;
         private void Form1_Load(object sender, EventArgs e)
         {
+            /*
             Vertice mix = new Vertice("Mixquiahuala");
             Vertice ixmi = new Vertice("Ixmiquilpan");
             Vertice acto = new Vertice("Actopan");
@@ -432,19 +433,28 @@ namespace InteligenciaArtificalGrafica
             Vertice destino = hidalgo.Buscar("Tula");
             Busqueda busqueeda = new Busqueda();
             busqueeda.PrimeroEnAnchura(origen, destino);
+            */
 
-            /*
+            
             Pandas pd = new Pandas();
-            pd.read_csv(baseDirectory+ "Calificaciones.csv", 1);
+            pd.read_csv(baseDirectory+ "Colesterol.csv", 1);
 
-            Matrix X = pd.iloc(1, 1, pd.nRow, 3);
+            Matrix Y = pd.iloc(1, pd.nCol, pd.nRow, pd.nCol);
 
-            Matrix Y = pd.iloc(1, 4, pd.nRow, 4);
+            Matrix X = pd.iloc(1, 1, pd.nRow, pd.nCol - 1);
+
+            Y.Show();
 
             LinearRegresion reg = new LinearRegresion ();
 
             reg.Fit(X,Y);
-            */
+
+            Vector vectorX = new Vector(78, 110, 13.2);
+            Matrix x = new Matrix(vectorX).T;
+            double vectorY = reg.Predict(x);    
+            Trace.WriteLine(vectorY);
+
+            
 
             //nc = new Numcs();
             // xi = new Vector(6, 1, 4, 4, 6, 1, 3, 8, 7, 1, 4, 7, 1, 1, 7, 8, 2, 1, 6, 8);
@@ -471,7 +481,6 @@ namespace InteligenciaArtificalGrafica
         {
             Vector x = nc.linspace(100, 300, 10);
             Vector y = e.Values[1] + x * e.Values[2];
-
             formsPlot1.BeginInvoke(new MethodInvoker(() =>
             {
                 formsPlot1.Plot.Clear();

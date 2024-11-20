@@ -83,7 +83,7 @@ namespace InteligenciaArtificalGrafica.delos.Mathematics
             double[] data = new double[A.values.Length];
             for (int i = 0; i < A.values.Length; i++)
             {
-                data[i] = A.values[i] * B.values[i];
+                data[i] = A[i] * B[i];
             }
             Vector result = new Vector(data);
             return result;
