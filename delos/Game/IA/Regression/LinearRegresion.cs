@@ -87,7 +87,6 @@ namespace delos.Game.IA.Regression
                 OnFitEvent(new FitEventArgs("Fit Event", new double[] { i, θ0, θ1 }));
             }
 
-            //Trace.WriteLine(" θ1: " + θ1 + " θ0: " + θ0);
 
         }
 

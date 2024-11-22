@@ -136,6 +136,17 @@ namespace InteligenciaArtificalGrafica.delos.Mathematics
             return result;
         }
 
+        public static Vector operator /(double A, Vector B)
+        {
+            double[] data = new double[B.values.Length];
+            for (int i = 0; i < B.values.Length; i++)
+            {
+                data[i] = A / B.values[i];
+            }
+            Vector result = new Vector(data);
+            return result;
+        }
+
 
         public static Vector operator ^(Vector A, double B)
         {
@@ -143,6 +154,17 @@ namespace InteligenciaArtificalGrafica.delos.Mathematics
             for (int i = 0; i < A.values.Length; i++)
             {
                 data[i] = System.Math.Pow(A.values[i], B);
+            }
+            Vector result = new Vector(data);
+            return result;
+        }
+
+        public static Vector operator ^(double A, Vector B)
+        {
+            double[] data = new double[B.values.Length];
+            for (int i = 0; i < B.values.Length; i++)
+            {
+                data[i] = System.Math.Pow(A, B.values[i]);
             }
             Vector result = new Vector(data);
             return result;
