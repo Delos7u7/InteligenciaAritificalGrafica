@@ -146,6 +146,20 @@ namespace delos.Mathematics
             return R;
         }
 
+        public static Matrix operator -(double A, Matrix B)
+        {
+            Numcs nc = new Numcs();
+            Matrix R = nc.Zeros(B.nRows, B.nCols);
+            for (int i = 0; i < B.nRows; i++)
+            {
+                for (global::System.Int32 j = 0; j < B.nCols; j++)
+                {
+                    R[i, j] = A - B[i, j];
+                }
+            }
+            return R;
+        }
+
         public static Matrix operator *(Matrix A, Matrix B)
         {
             Numcs nc = new Numcs();
@@ -169,6 +183,20 @@ namespace delos.Mathematics
                 for (global::System.Int32 j = 0; j < A.nCols; j++)
                 {
                     R[i, j] = A[i, j] * B;
+                }
+            }
+            return R;
+        }
+
+        public static Matrix operator *(double A, Matrix B)
+        {
+            Numcs nc = new Numcs();
+            Matrix R = nc.Zeros(B.nRows, B.nCols);
+            for (int i = 0; i < B.nRows; i++)
+            {
+                for (global::System.Int32 j = 0; j < B.nCols; j++)
+                {
+                    R[i, j] = A * B[i, j];
                 }
             }
             return R;
